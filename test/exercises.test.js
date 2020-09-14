@@ -1,15 +1,14 @@
 const {
   grouped_anagrams,
   top_k_frequent_elements,
-  valid_sudoku
-} = require('../lib/exercises');
+  valid_sudoku,
+} = require("../lib/exercises");
 
 describe("exercises", function () {
   describe("grouped_anagrams", function () {
     it("will return [] for an empty array", function () {
       // Arrange
       const list = [];
-
 
       // Act-Assert
       expect(grouped_anagrams(list)).toEqual([]);
@@ -21,11 +20,7 @@ describe("exercises", function () {
 
       // Act
       const answer = grouped_anagrams(list);
-      const expected_answer = [
-        ["ate", "eat", "tea"],
-        ["nat", "tan"],
-        ["bat"]
-      ];
+      const expected_answer = [["ate", "eat", "tea"], ["nat", "tan"], ["bat"]];
 
       // Assert
       expect(answer.length).toBeGreaterThan(0);
@@ -47,7 +42,7 @@ describe("exercises", function () {
         ["tar"],
         ["pop"],
         ["pan"],
-        ["pap"]
+        ["pap"],
       ];
 
       // Assert
@@ -59,13 +54,11 @@ describe("exercises", function () {
 
     it("will work for strings that are all anagrams", function () {
       // Arrange
-      const list = ["eat", "tae", "tea", "eta", "aet", "ate"]
+      const list = ["eat", "tae", "tea", "eta", "aet", "ate"];
 
       // Act
       const answer = grouped_anagrams(list);
-      const expected_answer = [
-        ["aet", "ate", "eat", "eta", "tae", "tea"]
-      ];
+      const expected_answer = [["aet", "ate", "eat", "eta", "tae", "tea"]];
 
       // Assert
       expect(answer.length).toBeGreaterThan(0);
@@ -137,7 +130,7 @@ describe("exercises", function () {
     });
   });
 
-  describe.skip("valid sudoku", function () {
+  describe("valid sudoku", function () {
     it("is not valid if a row has duplicate values", function () {
       // Arrange
       const table = [
@@ -149,7 +142,7 @@ describe("exercises", function () {
         [".", ".", ".", ".", ".", ".", ".", ".", "."],
         [".", ".", ".", ".", ".", ".", ".", ".", "."],
         [".", ".", ".", ".", ".", ".", ".", ".", "."],
-        [".", ".", ".", ".", ".", ".", ".", ".", "."]
+        [".", ".", ".", ".", ".", ".", ".", ".", "."],
       ];
 
       // Act
@@ -170,7 +163,7 @@ describe("exercises", function () {
         [".", ".", ".", ".", "4", ".", ".", ".", "."],
         [".", ".", ".", ".", ".", ".", ".", ".", "."],
         [".", ".", ".", ".", ".", ".", ".", ".", "."],
-        [".", ".", ".", ".", ".", ".", ".", ".", "."]
+        [".", ".", ".", ".", ".", ".", ".", ".", "."],
       ];
 
       // Act
@@ -191,7 +184,7 @@ describe("exercises", function () {
         ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
         [".", "6", ".", ".", ".", ".", "2", "8", "."],
         [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-        [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+        [".", ".", ".", ".", "8", ".", ".", "7", "9"],
       ];
 
       // Act
@@ -212,7 +205,7 @@ describe("exercises", function () {
         ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
         [".", "6", ".", ".", ".", ".", "2", "8", "."],
         [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-        [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+        [".", ".", ".", ".", "8", ".", ".", "7", "9"],
       ];
 
       // Act
@@ -233,7 +226,7 @@ describe("exercises", function () {
         ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
         [".", "6", ".", ".", ".", ".", "2", "8", "."],
         [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-        [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+        [".", ".", ".", ".", "8", ".", ".", "7", "9"],
       ];
 
       // Act
@@ -254,7 +247,7 @@ describe("exercises", function () {
         ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
         [".", "6", ".", ".", ".", ".", "2", "8", "."],
         [".", ".", ".", "4", "1", "9", "8", ".", "5"],
-        [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+        [".", ".", ".", ".", "8", ".", ".", "7", "9"],
       ];
 
       // Act
